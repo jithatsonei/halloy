@@ -1329,8 +1329,6 @@ impl Client {
 
                             self.handle.try_send(command!("WHO", channel))?;
                         }
-
-                        log::debug!("[{}] {channel} - WHO requested", self.server);
                     }
 
                     return Ok(vec![Event::JoinedChannel(

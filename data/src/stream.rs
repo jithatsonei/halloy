@@ -237,6 +237,12 @@ async fn _run(
                             log::info!("[{server}] quit");
 
                             state = State::Quit;
+                        } else if let Command::WHO(mask, _, _) = &message.command {
+                            let mask = mask.clone();
+
+                            let _ = stream.connection.send(message).await;
+
+                            log::debug!("[{server}] {mask} - WHO requested");
                         } else {
                             let _ = stream.connection.send(message).await;
                         }
