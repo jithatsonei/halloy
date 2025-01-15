@@ -32,7 +32,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: Swatinem/rust-cache@v2
       with:
-        shared-key: "v0-rust-build-Windows_NT-49fe6a70-e39b8fba"         
+        shared-key: "v0-rust-build-Windows_NT"         
     - name: Check
       run: cargo check
     - name: Clippy
