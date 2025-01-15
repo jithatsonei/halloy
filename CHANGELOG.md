@@ -9,6 +9,7 @@ Added:
 - Timeout delay for notifications
 - Case mapping support via `ISUPPORT`
 - Restore last known window position and size at launch
+- 
 
 Fixed:
 - Long username & password combinations could cause SASL authentication to fail
